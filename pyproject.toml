@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sharepoint-report-publisher"
+version = "0.1.0"
+description = "Turn a time-tracking CSV export into a weekly effort report and publish it to SharePoint via Microsoft Graph."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Logan D Taylor" }]
+requires-python = ">=3.11"
+dependencies = [
+    "msal>=1.28",
+    "requests>=2.31",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "responses>=0.25",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "types-requests",
+]
+
+[project.scripts]
+report-publisher = "report_publisher.cli:main"
+
+[project.urls]
+Source = "https://github.com/LoganTaylorITGuy/sharepoint-report-publisher"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/report_publisher"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=report_publisher --cov-report=term-missing --cov-fail-under=90"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "S", "PT", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105", "S106"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["msal"]
+ignore_missing_imports = true

@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.DS_Store
+# Real exports and generated reports stay local; only the fictional examples are committed.
+*.csv
+weekly_report_*.md
+!examples/*.csv
+!examples/*.md
+# Never commit auth material
+*.key
+*.pem
+*.pfx
+*.crt
+.env

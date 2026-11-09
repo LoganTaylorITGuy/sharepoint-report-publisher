@@ -1,0 +1,13 @@
+Date,Staff,Client,Project,Category,Hours,Billable,Description
+2026-10-30,Jordan Avery,Contoso Dental,Support,Break/Fix,1.0,Yes,Outside the reporting week; should be excluded
+2026-11-02,Jordan Avery,Contoso Dental,Support,Break/Fix,1.5,Yes,Front desk printer offline after driver update; rolled back driver and pinned version via Intune
+2026-11-02,Jordan Avery,Internal,Automation,Setup/Configuration,2.0,No,Built weekly report publisher: CSV parsing and effort buckets
+2026-11-03,Jordan Avery,Fabrikam Logistics,Onboarding,Employee Lifecycle,1.25,Yes,New hire setup: Entra account | M365 license | Autopilot enrollment
+2026-11-03,Jordan Avery,Northwind Traders,Firewall Refresh,Project,3.0,Yes,Replaced edge firewall; migrated rules and site-to-site VPN; verified failover
+2026-11-04,Jordan Avery,Contoso Dental,Security,Security Review,1.0,Yes,MFA coverage review: 2 users without strong methods; scheduled enrollment
+2026-11-04,Jordan Avery,Internal,Documentation,Documentation,1.5,No,Wrote offboarding SOP and runbook
+2026-11-05,Jordan Avery,Internal,Learning,Training,2.0,No,Microsoft Graph upload sessions and throttling guidance
+2026-11-05,Jordan Avery,Fabrikam Logistics,Support,Break/Fix,0.75,Yes,Shared mailbox permissions for dispatch team
+2026-11-06,Jordan Avery,Northwind Traders,Firewall Refresh,Project,1.5,No,Post-cutover monitoring (included in fixed-fee project)
+2026-11-06,Jordan Avery,Internal,Learning,Certification,1.5,No,AZ-104 practice exam
+2026-11-06,Sam Rivera,Contoso Dental,Support,Break/Fix,2.0,Yes,Different technician; excluded when filtering by staff
